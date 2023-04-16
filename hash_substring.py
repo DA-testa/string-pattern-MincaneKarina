@@ -8,8 +8,7 @@ def read_input():
         pattern = input()
         text = input()
     elif "F" in mode:
-        filename = input()
-        with open ("./tests/" + filename, mode = "r") as file:
+        with open ("./tests/06" + filename, mode = "r") as file:
             pattern = file.readline()
             text = file.readline()
         
