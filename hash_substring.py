@@ -7,13 +7,11 @@ def read_input():
     if "I" in mode:
         pattern = input()
         text = input()
-        #get_occurrences(pattern, text)
     elif "F" in mode:
         filename = input()
         with open ("./tests/" + filename, mode="r") as file:
             pattern = file.readline()
             text = file.readline()
-           # get_occurrences(pattern, text)
         
     
     # after input type choice
