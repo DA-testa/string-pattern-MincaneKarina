@@ -44,7 +44,9 @@ def get_occurrences(pattern, text):
     k = text_length-pattern_length
     for i in range(k+1):
         if text_hash==pattern_hash:
-            output.append(i)
+            if text[i:i+pattern_length] == pattern:
+                output.append(i)
+        
         if i < k:
             h = pow(B,pattern_length-1) % Q
             text_hash= (B * (text_hash-ord(text[i])*h)+ord(text[i+pattern_length]))% Q
