@@ -9,7 +9,7 @@ def read_input():
         text = input()
     elif "F" in mode:
         #filename = input()
-        with open ("./tests/" + input(), mode="r") as file:
+        with open ("./tests/06" , mode="r") as file:
             pattern = file.readline()
             text = file.readline()
         
