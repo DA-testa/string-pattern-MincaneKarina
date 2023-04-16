@@ -8,8 +8,8 @@ def read_input():
         pattern = input()
         text = input()
     elif "F" in mode:
-        filename = input()
-        with open ("./tests/" + filename, mode="r") as file:
+        #filename = input()
+        with open ("./tests/" + input(), mode="r") as file:
             pattern = file.readline()
             text = file.readline()
         
@@ -46,7 +46,6 @@ def get_occurrences(pattern, text):
         if text_hash==pattern_hash:
             if text[i:i+pattern_length] == pattern:
                 output.append(i)
-        
         if i < k:
             h = pow(B,pattern_length-1) % Q
             text_hash= (B * (text_hash-ord(text[i])*h)+ord(text[i+pattern_length]))% Q
